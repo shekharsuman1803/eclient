@@ -6,7 +6,7 @@ metadata:
     run: deploy1
   name: deploy1
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       run: deploy1
@@ -21,7 +21,7 @@ spec:
       - image: gcr.io/eventsite-256816/event-client1-image:v0.BUILD_NUMBER
         env:
         - name: SERVER
-          value: http://eventserver-lb1:8082      
+          value: http://eventserver-lb:8082      
         name: deploy1
         resources: {}
 status: {}

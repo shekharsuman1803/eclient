@@ -3,24 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Team [TEAM NAME] Website</title>
+  <title>Team Ninja's Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="stylesheet" href="/css/main.min.css">
+  <style>
+h1 {color:blue; 
+font-size: 20; 
+font-weight: bold;
+font-family: verdana;
+text-align: center;
+}
+h2 {color:blue; 
+font-size: 16;
+font-weight: bold;
+font-family: verdana;
+text-align: center;
+} 
+div{
+font-size: 12;
+font-weight: italics;
+font-family: verdana;
+text-align: center;
+}
+input[type=text;]:focus {
+  background-color: lightblue;
+}
+
+/* Style the form - display items horizontally */
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  text-align: center;
+}
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+ 
+}
+
+/* Style the input fields */
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  }
+
+/* Style the submit button */
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  color: white;
+}
+.form-inline button:hover {
+  background-color: royalblue;
+}
+.form-inline button{
+  color:black; 
+	font-size: 10; 
+	font-weight: bold;
+	font-family: verdana;
+}
+.form-inline label {
+	color:black; 
+	font-size: 10; 
+	font-weight: bold;
+	font-family: verdana;
+}
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
 </head>
-<body>
+<body background="nws.jpg">
   <div>
-      <h1>Welcome to [TEAM NAME'S] application</h1>
+      <h1 align = "center">Welcome to Ninja Updates</h1>
     {{{body}}}
 </div>
-<div>
-  <h2>Add an event</h2>
-    <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       <br />
-        <input type="submit" name="submit" value="submit" />
-    </form>
+<div class="center">
+  <h2 align = "center">Add an event</h2>
+    <form class="form-inline" action="/event" method="post">
+	<p>
+	<label for="title">Title: </label>
+	<input name="title" type="text" />
+	<label for="description">Description: </label>
+	<input name="description" type="text" />
+	<button type="submit" name="submit" value="submit">Submit</button>
+	</p>
+	</form>
   </div>
 </body>
 </html>
